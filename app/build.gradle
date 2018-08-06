@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 24
+    defaultConfig {
+        applicationId "com.darryncampbell.retailassistant"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //implementation 'ai.api:sdk:2.0.7@aar'
+    implementation 'com.android.support:appcompat-v7:23.2.1'
+    implementation project(':ailib')
+    implementation 'com.symbol:emdk:6.8.21'
+}
