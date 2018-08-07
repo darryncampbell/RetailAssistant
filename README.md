@@ -27,7 +27,7 @@ Try communicating with the app as follows:
 - I have hardcoded the client key to communicate with my backend.  This is obviously not best security practice but this is a proof of concept demo
 - The backend processing is hard coded.  The app is not actually looking up prices or stock levels, the returned values are dependant on the barcode scanned so will be consistent if you scan the same barcode multiple times but will differ from barcode to barcode.
 - Scanned barcodes must be numeric
-- The Android SDK depends on version 1 of the DialogFlow API.  You MUST configure your backend to use v1 of the API in order for this client SDK to work.  If I was doing this again I would consider communicating to the backend directly via the REST API and using the v2 API.
+- The Android SDK depends on version 1 of the DialogFlow API.  You MUST configure your backend to use v1 of the API in order for this client SDK to work.
 - The instructions for including the SDK from maven, as detailed in the [readme](https://github.com/dialogflow/dialogflow-android-client/blob/master/README.md) do not work for me, I therefore had to include the SDK in the same way as the sample app.
 
 ## Screenshots
