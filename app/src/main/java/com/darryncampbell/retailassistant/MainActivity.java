@@ -109,6 +109,20 @@ public class MainActivity extends AppCompatActivity implements AIButton.AIButton
         // use this method to disconnect from speech recognition service
         // Not destroying the SpeechRecognition object in onPause method would block other apps from using SpeechRecognition service
         aiButton.pause();
+
+        //  From EMDK Sample
+        // De-initialize scanner
+        deInitScanner();
+
+        // Remove connection listener
+        if (barcodeManager != null) {
+            barcodeManager = null;
+        }
+
+        // Release the barcode manager resources
+        if (emdkManager != null) {
+            emdkManager.release(EMDKManager.FEATURE_TYPE.BARCODE);
+        }
     }
 
     @Override
@@ -117,6 +131,15 @@ public class MainActivity extends AppCompatActivity implements AIButton.AIButton
         //  From dialogflow sample
         // use this method to reinit connection to recognition service
         aiButton.resume();
+
+        //  From EMDK Sample
+        // Acquire the barcode manager resources
+        if (emdkManager != null) {
+            barcodeManager = (BarcodeManager) emdkManager.getInstance(EMDKManager.FEATURE_TYPE.BARCODE);
+
+            // Initialize scanner
+            initScanner();
+        }
     }
 
     @Override
@@ -394,6 +417,33 @@ public class MainActivity extends AppCompatActivity implements AIButton.AIButton
             }else{
                 textViewStatus.setText("Status: " + "Failed to initialize the scanner device.");
             }
+        }
+    }
+
+    private void deInitScanner() {
+        if (scanner != null) {
+            try {
+                scanner.cancelRead();
+                scanner.disable();
+
+            } catch (Exception e) {
+                textViewStatus.setText("Status: " + e.getMessage());
+            }
+
+            try {
+                scanner.removeDataListener(this);
+                scanner.removeStatusListener(this);
+
+            } catch (Exception e) {
+                textViewStatus.setText("Status: " + e.getMessage());
+            }
+
+            try{
+                scanner.release();
+            } catch (Exception e) {
+                textViewStatus.setText("Status: " + e.getMessage());
+            }
+       scanner = null;
         }
     }
 
