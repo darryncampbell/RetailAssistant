@@ -27,5 +27,5 @@ dependencies {
     implementation 'ai.api:libai:1.6.12'
     implementation 'com.android.support:appcompat-v7:24.2.1'
     //implementation project(':ailib')
-    implementation 'com.symbol:emdk:6.8.21'
+    implementation 'com.symbol:emdk:6.9.16'
 }
