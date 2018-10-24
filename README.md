@@ -1,3 +1,5 @@
+**This application depends on V1 of the DialogFlow API.  Google [have announced](https://blog.dialogflow.com/post/migrate-to-dialogflow-api-v2/) that V1 will be shut down on October 23rd 2019.  This dependency is driven by the [Android SDK](https://github.com/dialogflow/dialogflow-android-client) but according to the [SDK page](https://dialogflow.com/docs/sdks) the Android SDK is not yet available for V2.**
+
 # RetailAssistant
 Proof of concept to show DialogFlow in a retail environment
 
