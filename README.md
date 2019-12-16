@@ -1,10 +1,7 @@
 **This application depends on V1 of the DialogFlow API.  Google [have announced](https://blog.dialogflow.com/post/migrate-to-dialogflow-api-v2/) that V1 will be shut down on ~~October 23rd 2019~~ March 31st 2020 ([updated announcment](https://cloud.google.com/dialogflow/docs/release-notes#November_14_2019)).  This dependency is driven by the [Android SDK](https://github.com/dialogflow/dialogflow-android-client) but according to the [SDK page](https://dialogflow.com/docs/sdks) the Android SDK is not yet available for V2.**
 
-**Per the screenshot below from the [Quickstart guide](https://cloud.google.com/dialogflow/docs/quickstart-api), the Java SDK does not support Android, the only option for Android developers would appear to be the [REST API](https://cloud.google.com/dialogflow/docs/reference/rest/v2-overview)**
+**More information on a transition to v2 is available from [here](Transitioning_To_V2.md)**
 
-![Java SDK Android support](https://raw.githubusercontent.com/darryncampbell/RetailAssistant/master/screens/v2_java_support.png)
-
-**Due to the tight integration with the V1 Android SDK and the significant changes required to move to the REST API, I have not (yet) transitioned this app**
 
 # RetailAssistant
 Proof of concept to show DialogFlow in a retail environment
