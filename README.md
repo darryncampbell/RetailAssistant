@@ -2,7 +2,7 @@
 
 **More information on a transition to v2 is available from [here](Transitioning_To_V2.md)**
 
-**Whilst not implemented in this project, I did produce a proof of concept for using Android with DialogFlow V2 [here](https://github.com/darryncampbell/AndroidV2DialogFlow)
+**Whilst not implemented in this project, I did produce a proof of concept for using Android with DialogFlow V2 [here](https://github.com/darryncampbell/AndroidV2DialogFlow)**
 
 # RetailAssistant
 Proof of concept to show DialogFlow in a retail environment
