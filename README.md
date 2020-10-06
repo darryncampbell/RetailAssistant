@@ -1,3 +1,6 @@
+*Please be aware that this application / sample is provided as-is for demonstration purposes without any guarantee of support*
+=========================================================
+
 **This application depends on V1 of the DialogFlow API.  Google [have announced](https://blog.dialogflow.com/post/migrate-to-dialogflow-api-v2/) that V1 will be shut down on ~~October 23rd 2019 March 31st 2020~~ May 31st, 2020 ([updated announcment](https://cloud.google.com/dialogflow/docs/release-notes#November_14_2019)).  This dependency is driven by the [Android SDK](https://github.com/dialogflow/dialogflow-android-client) but according to the [SDK page](https://dialogflow.com/docs/sdks) the Android SDK is not yet available for V2.**
 
 **More information on a transition to v2 is available from [here](Transitioning_To_V2.md)**
